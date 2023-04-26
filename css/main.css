@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fraunces:wght@100&family=Hanken+Grotesk:wght@500;700;800&family=Poppins&family=Roboto+Slab:wght@600&display=swap');
+/*
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fraunces:wght@100&family=Hanken+Grotesk:wght@500;700;800&family=Open+Sans&family=Poppins&family=Roboto+Slab:wght@600&display=swap');
+*/
+/*
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Fraunces', serif;
+font-family: 'Hanken Grotesk', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Slab', serif;
+*/
+
+/*
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Fraunces', serif;
+font-family: 'Hanken Grotesk', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Slab', serif
+*/
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+body{
+    margin: 0;
+    background-image: url('bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-color: var(--Violet);
+    background-size:contain;
+    background-position: top;
+
+}
+
+h2{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400px;
+}
+p{
+    color: white;
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+}
+
+
+.main_container{
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+}
+
+.main_logo{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 120px;
+}
+.main_img
+{
+    width: 100%;
+}
+
+.top_container{
+    grid-column-start: 2;
+}
+.second_container{
+    grid-column-start: 2;
+    text-align: center;
+}
+
+button{
+    width: 200px;
+    height: 34px;
+    border-radius: 20px;
+    border: none;
+    
+}
+
+button{
+    margin-top: 10px;
+    color: var(--Violet);
+    text-align: center;
+    box-shadow:
+  0px 2.5px 2.7px rgba(0, 0, 0, 0.022),
+  0px 6.5px 6.9px rgba(0, 0, 0, 0.032),
+  0px 13.5px 14.2px rgba(0, 0, 0, 0.039),
+  0px 27.1px 29.2px rgba(0, 0, 0, 0.049),
+  0px 68px 80px rgba(0, 0, 0, 0.07);
+}
+
+.icons{
+    grid-column-start: 2;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.icons img{
+    width: 30px;
+    margin: 0 8px 0 8px;
+    
+}
+
+
+@media (min-width: 1024px) {
+
+body{
+    background-image: url('bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: top;
+}
+
+h2{
+    font-size: 34px;
+}
+
+p{
+    font-weight: ;
+}
+
+.main_container{
+    display: grid;
+    /*grid-template-columns: 5% 50% 5% auto 5%;
+    grid-template-rows: 2% 10% auto 10%;*/
+    grid-auto-flow: column; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 0.2fr 2.3fr 0.2fr 2.1fr 0.2fr; 
+    grid-template-rows: 0.2fr 0.5fr 3.1fr 0.7fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."; 
+}
+
+.top_container{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+.main_logo{
+    width: 34%;
+}
+
+.main_img{
+    width: 100%;
+   
+}
+
+.second_container{
+    grid-column-start: 4;
+    grid-row-start: 3;
+    text-align: left;
+    margin-top: 70px;
+    
+}
+.icons{
+   grid-column-start: 4;
+   grid-row-start:  4;
+   justify-self: end;
+   align-self: center;
+   
+}
+}
